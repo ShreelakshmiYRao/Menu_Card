@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<Style>
+    h2 {
+        color:rgb(243, 84, 44);
+        text-align:center;
+        font-size: 30px;
+
+    }
+</Style>
+<body>
+    <h1 class="styled-header">Frosty Bliss</h1>
+</body>
+    <style>
+       
+        #orderMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+        } 
+       
+    
+        body {
+            font-style:italic;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin:5px;
+             /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            color: rgb(247, 57, 231);
+            background-image:url('images/background.jpg')
+            
+        }
+       
+        .menu-item {
+            cursor: pointer;
+            color: rgb(55, 5, 78);
+            text-decoration: underline;
+            text-align:center;
+            font-size: 20px;
+        }
+        .ice-cream-photo {
+            display: none;
+            
+        }
+       
+
+    </style>
+    <script>
+        function showOrderMessage() {
+            document.getElementById('orderMessage').style.display = 'block';
+        }
+    </script>
+</head>
+
+    <h2>Ice Cream Menu</h2>
+    <div>
+        <p class="menu-item" onclick="showPhoto('vanilla')">Vanilla Scoop</p>
+        <p class="menu-item" onclick="showPhoto('chocolate')">Chocolate Scoop</p>
+        <p class="menu-item" onclick="showPhoto('strawberry')">Strawberry Scoop</p>
+        <p class="menu-item" onclick="showPhoto('butterscotch')">ButterScotch Scoop</p>
+        <p class="menu-item" onclick="showPhoto('chocolatedad')">Chocolate Dad</p>
+        <p class="menu-item" onclick="showPhoto('blue moon')">Blue Moon</p>
+        
+    </div>
+    
+    <div id="photo-container">
+        <img id="vanilla" class="ice-cream-photo" src="images/image1.avif"alt="Vanilla Ice Cream" width="300" height="200">
+        <img id="chocolate" class="ice-cream-photo" src="images/choco.jpg" alt="Chocolate Ice Cream" width="300" height="200">
+        <img id="strawberry" class="ice-cream-photo" src="images/strawberry.jpg" alt="Strawberry Ice Cream" width="300" height="200">
+        <img id="butterscotch" class="ice-cream-photo" src="images/bs.jpg" alt="ButterScotch" width="300" height="200">
+        <img id="chocolatedad" class="ice-cream-photo" src="images/cd.jpg" alt="Chocalate Dad" width="300" height="200">
+        <img id="blue moon" class="ice-cream-photo" src="images/bm.jpg" alt="blue moon" width="300" height="200">
+    
+    </div>
+    
+    <button onclick="showOrderMessage()">Place Order</button>
+    <p id="orderMessage">Your order has been placed successfully!</p>
+</body>
+    </html>
+
+
+    <script>
+        function showPhoto(flavor) {
+            // Hide all photos
+            document.querySelectorAll('.ice-cream-photo').forEach(photo => {
+                photo.style.display = 'none';
+            });
+            // Show the selected photo
+            document.getElementById(flavor).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
